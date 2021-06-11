@@ -1,0 +1,23 @@
+extend type Query {
+    products:[Product]
+    product(id:String):Product
+}
+
+extend type Mutation {
+    createProduct(product:ProductCreation):Product
+    updateProduct(id:String,product:ProductCreation):Product
+    deleteProduct(id:String):Product
+}
+
+type Product{
+    id:ID
+    name:String
+    code:String
+    price:Float
+}
+
+input ProductCreation{
+    name:String
+    code:String
+    price:Float
+}
