@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import programacion.nube.graphql.data.ProductDocument;
 import programacion.nube.graphql.data.ProductRepository;
+import programacion.nube.graphql.data.ProductoDocument;
+import programacion.nube.graphql.dtos.ProductDto;
 
 import java.util.List;
 import java.util.Optional;
@@ -47,5 +49,6 @@ public class ProductService {
         this.productRepository.deleteById(id);
         return productDb;
     }
+
 
 }
