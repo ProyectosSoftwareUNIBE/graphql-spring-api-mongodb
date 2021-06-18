@@ -1,0 +1,21 @@
+type Producto{
+    id:ID
+    nombre:String
+    codigo:String
+    precio:Float
+}
+
+type ProductDto{
+    nombre:String
+    codigo:String
+    precio:Float
+    iva:Float
+    descuento:Float
+    precioFinal:Float
+}
+
+extend type Query {
+    productos: [Producto]
+    getPrecio(id:String,descuento:Float):ProductDto
+
+}
